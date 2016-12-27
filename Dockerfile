@@ -6,7 +6,8 @@ RUN apt-get update && \
 	apt-get install -y git
 RUN cd lib && \
 	git clone git://github.com/payden/libwebsock.git && \
-	apt-get install -y build-essential libtool automake libevent-dev libssl-dev && \
+	apt-get install -y build-essential libtool automake libevent-dev libssl-dev
+RUN cd libwebsock && \
 	./autogen.sh && \
 	./configure && make && sudo make install
 	
