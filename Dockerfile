@@ -9,4 +9,5 @@ RUN cd lib && \
 RUN cd lib/libwebsock && \
 	./autogen.sh && \
 	./configure && make && sudo make install
+RUN ldconfig
 	
